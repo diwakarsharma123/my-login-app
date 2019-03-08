@@ -1,0 +1,86 @@
+<html>
+    <body style="color:black">
+    
+        <h1> formtype1</h1>
+        <div style="width:250px;height:100px; background-color:blue;color: cornsilk">
+            
+        <form>
+            <i><b>E-mail :</i></b>:<br>
+            <input type="text" id="a"><br>
+            <i><b>Password :</i></b>:<br>
+            <input type="password" id="b"><br>
+            
+        </form>
+    </div>
+        <button type="button" onclick="login()">
+            <i>Login</i>
+
+
+        </button>
+        <button type="button" onclick="showpassword()">
+            <i>Show password</i>
+        </button>
+
+    
+
+        
+        <div id="d" style="width:200;height:30;background-color:black;color:white; display:none">
+        
+        
+        </div>
+    </div>
+    <div id="c" style="width:200;height:30;background-color:black;color:white; display:none">
+    
+    
+    </div>
+    
+    </body>
+    <script>
+        var email,password,x;
+   
+    
+        function login() {
+
+            email=document.getElementById('a').value;
+
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+//var address = document.getElementById[email].value;
+console.log(reg.test(email),)
+if (reg.test(email) == false) 
+{
+    alert('Invalid Email Address');
+    return (false);
+}
+            
+    document.getElementById('d').style.display="block";
+
+          
+
+          
+}
+
+    
+    
+    document.getElementById('d').innerHTML=" Login successful ";
+    
+
+    
+        
+       function showpassword()
+       {
+  x= document.getElementById('b');
+
+        console.log(x.type);
+
+ if (x.type==="password")
+ {
+     x.type="text";
+ }
+ else{
+     x.type="password";
+ }
+       }
+   
+        
+    </script>
+</html>
